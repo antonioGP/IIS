@@ -22,5 +22,13 @@ public class BinaryStringTest {
 		bitset.set(2, '1');
 		assertEquals('1',bitset.get(2));
 	}
-
+	
+	@Test(expected = BinaryStringException.class)
+	public void testGetOutOfLimitBit()
+	{
+		BinaryString bitset = new BinaryString("0110101");
+		
+		bitset.get(56);
+		
+	}
 }
