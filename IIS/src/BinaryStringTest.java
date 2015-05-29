@@ -31,4 +31,15 @@ public class BinaryStringTest {
 		bitset.get(56);
 		
 	}
+	
+	@Test(expected = BinaryStringException.class)
+	public void testSetOutOfLimitBit()
+	{
+		BinaryString bitset = new BinaryString("0110101");
+		
+		bitset.set(56,'1');
+		
+	}
+	
+	
 }
