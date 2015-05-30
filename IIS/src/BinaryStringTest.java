@@ -61,5 +61,11 @@ public class BinaryStringTest {
 		bitset.set(56,'z');		
 	}
 	
+	@Test
+	public void testToString()
+	{
+		BinaryString bitset = new BinaryString("1111000");
+		assertEquals(" 1111000",bitset.toString());
+	}
 	
 }

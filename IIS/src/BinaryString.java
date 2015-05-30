@@ -54,7 +54,7 @@ public class BinaryString {
 
 		for(int i=0;i<bits.length;i++)
 		{
-			if(bits[i]==1)
+			if(bits[i]=='1')
 			{
 				result += "1";
 			}else{
