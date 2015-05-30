@@ -50,8 +50,15 @@ public class BinaryStringTest {
 			fail("Se esperaba BinaryStringException");
 		}catch(BinaryStringException b){
 			
-		}
+		}		
+	}
+	
+	@Test(expected = BinaryStringException.class)
+	public void testInvalidBitValue()
+	{
+		BinaryString bitset = new BinaryString("0110101");
 		
+		bitset.set(56,'z');		
 	}
 	
 	

@@ -27,7 +27,12 @@ public class BinaryString {
 	public void set(int index, char value)
 	{		
 		try {
-			bits[index]=value;
+			if((value!='1')&&(value!='0'))
+			{
+				throw new BinaryStringException("Valor no soportado");
+			}else{
+				bits[index]=value;
+			}
 		} catch (ArrayIndexOutOfBoundsException e) {
 			throw new BinaryStringException("Índice fuera de rango");
 		}		
